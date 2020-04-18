@@ -1,10 +1,10 @@
-﻿namespace Mpc.KafakMusic.ConsoleAppProducer
-{
-    using System;
-    using System.Diagnostics;
-    using System.Threading.Tasks;
-    using Confluent.Kafka;
+﻿using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
+using Confluent.Kafka;
 
+namespace Mpc.KafakMusic.ConsoleAppProducer
+{
     public static class Program
     {
         private static async Task Main(string[] args)

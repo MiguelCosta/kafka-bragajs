@@ -1,11 +1,11 @@
-﻿namespace Mpc.KafakMusic.ConsoleAppConsumer
-{
-    using System;
-    using System.Threading;
-    using System.Threading.Tasks;
-    using Confluent.Kafka;
-    using NAudio.Wave;
+﻿using System;
+using System.Threading;
+using System.Threading.Tasks;
+using Confluent.Kafka;
+using NAudio.Wave;
 
+namespace Mpc.KafakMusic.ConsoleAppConsumer
+{
     public static class Program
     {
         private static async Task Main(string[] args)
@@ -37,9 +37,9 @@
                     {
                         var cr = consumer.Consume(cts.Token);
 
-                        Console.WriteLine($"Consumed message '{cr.Value}' at: '{cr.TopicPartitionOffset}'.");
+                        Console.WriteLine($"Consumed message '{cr.Message.Value}' at: '{cr.TopicPartitionOffset}'.");
 
-                        PlayAsync(cr.Value);
+                        PlayAsync(cr.Message.Value);
                     }
                     catch (ConsumeException e)
                     {
