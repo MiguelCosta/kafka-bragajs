@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using Confluent.Kafka;
 using NAudio.Wave;
 
-namespace Mpc.KafakMusic.ConsoleAppConsumer
+namespace ConsoleConsumerMusic
 {
     public static class Program
     {
@@ -14,13 +14,13 @@ namespace Mpc.KafakMusic.ConsoleAppConsumer
 
             var conf = new ConsumerConfig
             {
-                GroupId = "test-consumer-group",
+                GroupId = "consumer-music",
                 BootstrapServers = "localhost:9092",
-                AutoOffsetReset = AutoOffsetReset.Earliest
+                AutoOffsetReset = AutoOffsetReset.Latest
             };
 
             using var consumer = new ConsumerBuilder<Ignore, string>(conf).Build();
-            consumer.Subscribe("kafkasound-topic");
+            consumer.Subscribe("topic-numbers");
 
             var cts = new CancellationTokenSource();
             Console.CancelKeyPress += (_, e) =>
@@ -57,6 +57,8 @@ namespace Mpc.KafakMusic.ConsoleAppConsumer
         private static async Task PlayAsync(string input)
         {
             var file = GetSoundFile(input);
+
+            Console.WriteLine(file);
 
             using var audioFile = new AudioFileReader(@"soundfiles\" + file);
             using var outputDevice = new WaveOutEvent();

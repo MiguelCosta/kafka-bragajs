@@ -9,13 +9,18 @@
 ### Producer
 
 ```bash
-> cd .\src\Mpc.KafakMusic.ConsoleAppProducer\
+> cd .\src\ConsoleProducerNumbers\
 > dotnet run
 ```
 
 ### Consumer
 
 ```bash
-> cd .\src\Mpc.KafakMusic.ConsoleAppConsumer\
+> cd .\src\ConsoleConsumerMusic\
+> dotnet run
+```
+
+```bash
+> cd .\src\ConsoleConsumerMath\
 > dotnet run
 ```

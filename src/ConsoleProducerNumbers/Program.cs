@@ -1,15 +1,16 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Text;
 using System.Threading.Tasks;
 using Confluent.Kafka;
 
-namespace Mpc.KafakMusic.ConsoleAppProducer
+namespace ConsoleProducerNumbers
 {
     public static class Program
     {
         private static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello Kafka Music Producer!");
+            Console.WriteLine("Hello Kafka Numbers Producer!");
 
             var config = new ProducerConfig { BootstrapServers = "localhost:9092" };
 
@@ -22,11 +23,15 @@ namespace Mpc.KafakMusic.ConsoleAppProducer
                 try
                 {
                     producer.ProduceAsync(
-                        "kafkasound-topic",
+                        "topic-numbers",
                         new Message<string, string>
                         {
                             Value = input,
-                            Key = input
+                            Key = input,
+                            Headers = new Headers
+                            {
+                                new Header("bragajs", Encoding.UTF8.GetBytes("bragajs kafka"))
+                            }
                         });
                 }
                 catch (ProduceException<Null, string> e)
