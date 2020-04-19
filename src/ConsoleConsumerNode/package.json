@@ -1,0 +1,12 @@
+{
+  "name": "console-consumer-math-node",
+  "version": "0.0.0",
+  "description": "ConsoleConsumerMathNode",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "kafka-node": "^5.0.0"
+  }
+}

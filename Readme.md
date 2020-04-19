@@ -1,19 +1,21 @@
 # Kafka - Sample
 
-### Kafka cluster
+## Run Kafka
 
 ```bash
 > docker-compose up
 ```
 
-### Producer
+## DotNet
+
+### Producer Numbers
 
 ```bash
 > cd ./src/ConsoleProducerNumbers
 > dotnet run
 ```
 
-### Consumer
+### Consumer Numbers
 
 ```bash
 > cd ./src/ConsoleConsumerMusic
@@ -37,4 +39,14 @@
 ```bash
 > cd ./src/Contracts
 > protoc userMessage.proto --csharp_out .
+```
+
+## NodeJS
+
+### Consumer
+
+```bash
+> cd ./src/ConsoleConsumerNode
+> npm i
+> node app.js
 ```
