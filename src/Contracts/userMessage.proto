@@ -1,0 +1,8 @@
+﻿syntax = "proto3";
+
+package Contracts;
+
+message UserMessage {
+    sfixed32 Id = 1;
+    string Name = 2;
+}

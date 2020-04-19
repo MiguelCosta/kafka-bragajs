@@ -22,7 +22,7 @@ namespace ConsoleProducerNumbers
 
                 try
                 {
-                    producer.ProduceAsync(
+                    producer.Produce(
                         "topic-numbers",
                         new Message<string, string>
                         {

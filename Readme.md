@@ -1,4 +1,4 @@
-# Kafka Music
+# Kafka - Sample
 
 ### Kafka cluster
 
@@ -9,18 +9,32 @@
 ### Producer
 
 ```bash
-> cd .\src\ConsoleProducerNumbers\
+> cd ./src/ConsoleProducerNumbers
 > dotnet run
 ```
 
 ### Consumer
 
 ```bash
-> cd .\src\ConsoleConsumerMusic\
+> cd ./src/ConsoleConsumerMusic
 > dotnet run
 ```
 
 ```bash
-> cd .\src\ConsoleConsumerMath\
+> cd ./src/ConsoleConsumerMath
 > dotnet run
+```
+
+### Api with kafka
+
+```bash
+> cd ./src/ApiWithKafka
+> dotnet run
+```
+
+### Generate Contracts
+
+```bash
+> cd ./src/Contracts
+> protoc userMessage.proto --csharp_out .
 ```
