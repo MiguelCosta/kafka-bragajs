@@ -22,6 +22,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiWithKafka", "ApiWithKafk
 EndProject
 Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "ConsoleConsumerNode", "ConsoleConsumerNode\ConsoleConsumerNode.njsproj", "{0463D4BA-FFD7-475E-974A-15E505C6510B}"
 EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "ConsoleConsumerNodeObject", "ConsoleConsumerNodeObject\ConsoleConsumerNodeObject.njsproj", "{A10975C8-AD61-4CCE-A2BC-D29CB72AE067}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -52,6 +54,10 @@ Global
 		{0463D4BA-FFD7-475E-974A-15E505C6510B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0463D4BA-FFD7-475E-974A-15E505C6510B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0463D4BA-FFD7-475E-974A-15E505C6510B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A10975C8-AD61-4CCE-A2BC-D29CB72AE067}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A10975C8-AD61-4CCE-A2BC-D29CB72AE067}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A10975C8-AD61-4CCE-A2BC-D29CB72AE067}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A10975C8-AD61-4CCE-A2BC-D29CB72AE067}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

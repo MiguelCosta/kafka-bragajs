@@ -50,3 +50,8 @@
 > npm i
 > node app.js
 ```
+
+```bash
+# Stop node processes (Windows)
+> taskkill /im node.exe /f
+```

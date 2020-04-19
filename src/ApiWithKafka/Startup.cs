@@ -15,7 +15,6 @@ namespace ApiWithKafka
     public class Startup
     {
         private IConsumer<int, UserMessage> _consumer;
-        private Task _backgroundTask;
         private static IProducer<int, UserMessage> _producerUserMessage;
 
         public Startup(IConfiguration configuration)
@@ -60,7 +59,6 @@ namespace ApiWithKafka
                 _producerUserMessage.Flush();
                 _producerUserMessage.Dispose();
                 _consumer.Dispose();
-                _backgroundTask.Dispose();
             });
         }
 
@@ -89,7 +87,7 @@ namespace ApiWithKafka
                 .Build();
             _consumer.Subscribe("topic-users");
 
-            _backgroundTask = Task.Factory.StartNew(() =>
+            Task.Factory.StartNew(() =>
             {
                 while (true)
                 {

@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Threading;
-using System.Threading.Tasks;
 using Confluent.Kafka;
 
 namespace ConsoleConsumerMath
 {
     public static class Program
     {
-        private static async Task Main(string[] args)
+        private static void Main(string[] args)
         {
-            Console.WriteLine("Hello Kafka Math Player!");
+            Console.WriteLine("Hello Kafka Calculator!");
 
             var conf = new ConsumerConfig
             {
@@ -36,12 +35,10 @@ namespace ConsoleConsumerMath
                     {
                         var cr = consumer.Consume(cts.Token);
 
-                        Console.WriteLine($"Consumed message '{cr.Message.Value}' at: '{cr.TopicPartitionOffset}'.");
-
                         if (int.TryParse(cr.Message.Value, out var number))
                         {
-                            var result = number * number + number + 50;
-                            Console.WriteLine($"Result: {result}");
+                            var result = 9 * number;
+                            Console.WriteLine($"9 * {number} = {result}");
                         }
                     }
                     catch (ConsumeException e)

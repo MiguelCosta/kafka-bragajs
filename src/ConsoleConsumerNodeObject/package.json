@@ -1,0 +1,13 @@
+{
+  "name": "console-consumer-node-object",
+  "version": "0.0.0",
+  "description": "ConsoleConsumerNodeObject",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  },
+  "dependencies": {
+    "kafka-node": "^5.0.0",
+    "protocol-buffers": "^4.1.2"
+  }
+}

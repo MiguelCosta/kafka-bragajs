@@ -1,18 +1,20 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Text;
-using System.Threading.Tasks;
 using Confluent.Kafka;
 
 namespace ConsoleProducerNumbers
 {
     public static class Program
     {
-        private static async Task Main(string[] args)
+        private static void Main(string[] args)
         {
             Console.WriteLine("Hello Kafka Numbers Producer!");
 
-            var config = new ProducerConfig { BootstrapServers = "localhost:9092" };
+            var config = new ProducerConfig
+            {
+                BootstrapServers = "localhost:9092"
+            };
 
             using var producer = new ProducerBuilder<string, string>(config).Build();
 
