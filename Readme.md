@@ -1,4 +1,14 @@
-# Kafka - Sample
+# Kafka - BragaJS
+
+Libraries:
+
+- C/C++: https://github.com/edenhill/librdkafka
+- Dotnet: https://github.com/confluentinc/confluent-kafka-dotnet
+- NodeJS: https://github.com/SOHU-Co/kafka-node
+
+Desktop Client:
+
+- Conduktor: https://www.conduktor.io/
 
 ## Run Kafka
 
@@ -45,12 +55,23 @@
 
 ### Consumer
 
+Simple type
+
 ```bash
 > cd ./src/ConsoleConsumerNode
 > npm i
 > node app.js
 ```
 
+With Protobuf
+
+```bash
+> cd ./src/ConsoleConsumerNodeObject
+> npm i
+> node app.js
+```
+
+Other commands
 ```bash
 # Stop node processes (Windows)
 > taskkill /im node.exe /f
